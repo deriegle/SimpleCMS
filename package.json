@@ -1,0 +1,38 @@
+{
+  "name": "simplecms",
+  "version": "1.0.0",
+  "description": "Simple CMS using Node.JS, Express, MongoDB, and Bootstrap",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deriegle/SimpleCMS.git"
+  },
+  "keywords": [
+    "cms",
+    "simple",
+    "easy",
+    "nodejs",
+    "js",
+    "node",
+    "express",
+    "mongodb",
+    "bootstrap",
+    "html",
+    "css",
+    "ejs"
+  ],
+  "author": "Devin Riegle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deriegle/SimpleCMS/issues"
+  },
+  "homepage": "https://github.com/deriegle/SimpleCMS#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}
