@@ -4,6 +4,7 @@ var postSchema = new mongoose.Schema({
 	title: String,
 	subtitle: String,
 	date: {type: Date, default: Date.now},
+	content: String,
 	user: {
 		/*id: {
 		 type: Mongoose.Schema.Types.ObjectId,

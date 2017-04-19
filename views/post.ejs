@@ -1,5 +1,36 @@
 <% include partials/header %>
+<% include partials/navbar %>
 
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1><%= post.title %></h1>
+                    <h2 class="subheading"><%= post.subtitle %></h2>
+                    <span class="meta">Posted by <a href="#"><%= post.user.username %></a> on <%= dateFormat(post.date, "mmmm dS, yyyy") %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
+<!-- 
+Post Content
+	Add content to post.content & any section headings
+	can be added to the code by using
+	<h2 class="section-heading"></h2>
+-->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            	<p><%= post.content %></p>
+            </div>
+        </div>
+    </div>
+</article>
 
 <% include partials/footer %>
