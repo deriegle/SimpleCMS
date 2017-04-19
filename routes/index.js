@@ -15,6 +15,14 @@ router.get("/", function(req, res){
 	});
 });
 
+router.get("/about", function(req, res){
+	res.render("about");
+});
+
+router.get("/contact", function(req, res){
+	res.render("contact");
+});
+
 router.get("/:postid", function(req, res){
 	var postId = req.params.postid;
 	Post.findById(postId, function(err, post){
@@ -22,9 +30,11 @@ router.get("/:postid", function(req, res){
 			console.error(err);
 			res.redirect("/");
 		} else {
-			res.render("post.ejs", {post: post, dateFormat: dateFormat});
+			res.render("post", {post: post, dateFormat: dateFormat});
 		}
 	});
 });
+
+
 
 module.exports = router;
