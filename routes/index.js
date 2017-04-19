@@ -6,7 +6,6 @@ const dateFormat = require("dateformat");
 router.get("/", function(req, res){
 	Post.find({}, function(err, allPosts){
 		if(err){
-			console.error(err);
 			res.send("Error loading main page");
 		} else {
 			allPosts.sort(function(a, b) { return (a.date < b.date) ? 1 : ((a.date > b.date) ? -1 : 0); });
@@ -25,12 +24,17 @@ router.get("/contact", function(req, res){
 
 router.get("/:postid", function(req, res){
 	var postId = req.params.postid;
-	Post.findById(postId, function(err, post){
+	Post.findOne({_id: postId}, function(err, post){
 		if(err){
 			console.error(err);
 			res.redirect("/");
 		} else {
-			res.render("post", {post: post, dateFormat: dateFormat});
+			if(post){
+				res.render("post", {post: post, dateFormat: dateFormat});
+			} else {
+				res.redirect("/");
+			}
+			
 		}
 	});
 });
