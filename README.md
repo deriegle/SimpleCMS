@@ -1,6 +1,14 @@
 # SimpleCMS
 Simple Node.JS, MongoDB, &amp; Bootstrap CMS
 
+## How to use:
+* Must have Node.js installed on local machine & MongoDB running  
+git clone https://github.com/deriegle/SimpleCMS.git  
+npm install  
+npm start  
+Server should be started now  
+Visit localhost:3001 in browser  
+
 ## Current Features:
 Simple Blog with Home, Post, Contact, and About Pages
 
