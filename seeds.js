@@ -1,4 +1,5 @@
 var Post = require("./models/post.js");
+var User = require("./models/user.js");
 
 var data = [
 	{
@@ -25,9 +26,20 @@ var data = [
 ];
 
 function seedDB(){
+	//createUser({username: "admin", passport: "helloworld", admin: true});
 	removePosts();
 	createPosts();
 }
+
+function createUser(userinfo){
+	User.create(userinfo, function(err, user){
+		if(err){
+			console.error(err);
+		} else {
+			console.log("Created user");
+		}
+	});
+};
 
 function removePosts(){
 	Post.remove({}, function(err){
