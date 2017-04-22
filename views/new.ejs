@@ -1,0 +1,63 @@
+<% include partials/header %>
+<% include partials/navbar %>
+
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1><%= site.title %></h1>
+                    <hr class="small">
+                    <span class="subheading">New Blog Post</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+ <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <form action="/" method="POST">
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Title</label>
+                        <input type="text" class="form-control" name="post[title]" placeholder="Post Title">
+                    </div>
+                </div>       
+
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Subtitle</label>
+                        <input type="text" class="form-control" name="post[subtitle]" placeholder="Post Subtitle">
+                    </div>
+                </div>
+
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Content</label>
+                        <textarea rows="5" name="post[content]" class="form-control" placeholder="Post Content"></textarea>
+                    </div>
+                </div>
+
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>User</label>
+                        <input type="text" class="form-control" name="post[user.username]" placeholder="User Name">
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

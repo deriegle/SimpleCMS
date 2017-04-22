@@ -28,9 +28,11 @@ Post Content
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             	<p><%= post.content %></p>
+                <a href="/<%= post._id %>/edit" type="submit" class="btn btn-default">Edit</a> 
             </div>
         </div>
     </div>
 </article>
+
 
 <% include partials/footer %>
