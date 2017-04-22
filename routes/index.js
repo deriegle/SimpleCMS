@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Post = require("../models/post.js");
 const User = require("../models/user.js");
+const adminRoutes = require("./admin.js");
 const dateFormat = require("dateformat");
 
 router.get("/", function(req, res){
@@ -21,6 +22,8 @@ router.get("/about", function(req, res){
 router.get("/contact", function(req, res){
 	res.render("contact");
 });
+
+router.use("/admin", adminRoutes);
 
 router.get("/:postid", function(req, res){
 	var postId = req.params.postid;
