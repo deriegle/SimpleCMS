@@ -9,7 +9,8 @@ Simple Node.JS, MongoDB, &amp; Bootstrap CMS
 - Server should be started now (Visit localhost:3001 in browser)   
 
 ## Current Features:
-Simple Blog with Home, Post, Contact, and About Pages
+Simple Blog with Home, Post, Contact, and About Pages  
+Create and Edit posts have been implemented by Joseph Cruz
 
 ## Working on:
 * Make contact page work properly  
@@ -19,8 +20,7 @@ Simple Blog with Home, Post, Contact, and About Pages
 ## Features wanted:
 Simple Blog with Home, Search, Post, Contact, About pages  
 User login with comments & likes on posts  
-Administration Panel  
-- Create and Edit Posts  
+Administration Panel    
 - Change basic theme on website  
 - Change Site Title & Page information  
 - Change navbar links  

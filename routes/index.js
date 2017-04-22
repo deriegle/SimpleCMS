@@ -23,7 +23,45 @@ router.get("/contact", function(req, res){
 	res.render("contact");
 });
 
+router.get("/new", function(req, res){
+    res.render("new");
+});
+
 router.use("/admin", adminRoutes);
+
+//Create Post Route
+router.post("/", function(req, res){
+    Post.create(req.body.post, function(err, newPost){
+        if(err){
+           res.send("Error creating new blog post");
+        } else {
+            res.redirect("/");        
+        }
+    });
+});
+
+//Edit Post Route
+router.get("/:id/edit", function(req, res){
+    Post.findById(req.params.id, function(err, foundPost){
+        if(err){
+           res.redirect("/");
+        } else {
+            res.render("edit", {post: foundPost});
+        }
+    });
+});
+
+//Update Edited Post Route
+router.put("/:id", function(req, res){
+    Post.findByIdAndUpdate(req.params.id, req.body.post, function(err, updatedPost){
+        if(err){
+            res.send("Error updating blog post");
+        } else {
+            res.redirect("/" + req.params.id);
+        }
+    });
+});
+
 
 router.get("/:postid", function(req, res){
 	var postId = req.params.postid;
@@ -41,7 +79,5 @@ router.get("/:postid", function(req, res){
 		}
 	});
 });
-
-
 
 module.exports = router;

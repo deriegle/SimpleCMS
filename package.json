@@ -23,9 +23,11 @@
   },
   "homepage": "https://github.com/deriegle/SimpleCMS#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "dateformat": "^2.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
+    "method-override": "^2.3.8",
     "mongoose": "^4.9.5"
   }
 }
