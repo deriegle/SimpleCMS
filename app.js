@@ -1,12 +1,12 @@
 const express 	= require("express");
 bodyParser  	= require("body-parser"),
 methodOverride 	= require("method-override");
-mongoose 	= require("mongoose"),
-routes		= require("./routes"),
-seedDB		= require("./seeds.js");
-PORT		= 3001,
-TITLE		= "Simple CMS",
-app 		= express(),
+mongoose 		= require("mongoose"),
+routes			= require("./routes"),
+seedDB			= require("./seeds.js");
+PORT			= 3001,
+TITLE			= "Simple CMS",
+app 			= express();
     
 mongoose.connect("mongodb://localhost/SimpleCMS");
 

@@ -1,8 +1,8 @@
-const router = require("express").Router();
-const Post = require("../models/post.js");
-const User = require("../models/user.js");
-const adminRoutes = require("./admin.js");
-const dateFormat = require("dateformat");
+const router 	= require("express").Router(),
+Post 			= require("../models/post.js"),
+User 			= require("../models/user.js"),
+adminRoutes 	= require("./admin.js"),
+dateFormat 		= require("dateformat");
 
 router.get("/", function(req, res){
 	Post.find({}, function(err, allPosts){
@@ -67,7 +67,7 @@ router.get("/:postid", function(req, res){
 	var postId = req.params.postid;
 	Post.findOne({_id: postId}, function(err, post){
 		if(err){
-			console.error(err);
+			// console.error(err);
 			res.redirect("/");
 		} else {
 			if(post){
